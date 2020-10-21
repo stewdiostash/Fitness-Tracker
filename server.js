@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const htmlRoutes = require("./routes/htmlRoutes");
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,6 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/workout",
 });
 
 const connection = mongoose.connection;
+app.use("/", htmlRoutes);
 
 connection.on("connected", () => {
   console.log("Mongoose successfully connected.");
@@ -28,8 +30,6 @@ app.get("/api/config", (req, res) => {
     success: true,
   });
 });
-
-// app.use(workoutController);
 
 // Start the server
 app.listen(PORT, () => {
