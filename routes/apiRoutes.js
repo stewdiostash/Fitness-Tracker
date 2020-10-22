@@ -61,6 +61,4 @@ router.put("/workouts/:id", (req, res) => {
 
 
 
-
-
 module.exports = router;
