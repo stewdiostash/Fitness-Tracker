@@ -20,7 +20,7 @@ This simple workout tracker logs the date and duration of workouts in addition t
 
 
 ## URL
-Deployed at https://megatech-fitness-tracker.herokuapp.com//
+Deployed at https://megatech-fitness-tracker.herokuapp.com
 
 
 ## Contributions
